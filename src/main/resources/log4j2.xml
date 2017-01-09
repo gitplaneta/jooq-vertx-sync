@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+  <Properties>
+    <Property name="LOG_LEVEL">DEBUG</Property>
+  </Properties>
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout>
+        <Pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSSX}{GMT+0} %p %c{1.} [%t] %replace{%msg}{(\n|\r)+}{ }%n%ex</Pattern>
+      </PatternLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="eu.busz" level="DEBUG" additivity="false">
+      <AppenderRef ref="console" />
+    </Logger>
+    <Root level="DEBUG">
+      <AppenderRef ref="console" />
+    </Root>
+  </Loggers>
+</Configuration>
